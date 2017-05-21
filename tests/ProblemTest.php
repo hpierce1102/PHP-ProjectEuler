@@ -9,13 +9,17 @@ use PHPUnit\Framework\TestCase;
 
 class ProblemTest extends TestCase
 {
+    /** @var Problem */
+    private $solution;
+
     public static function setUpBeforeClass()
     {
 
     }
 
-    public function setUp(){
-
+    public function setUp()
+    {
+        $this->solution = new Problem();
     }
 
     public function tearDown()
@@ -27,4 +31,23 @@ class ProblemTest extends TestCase
     {
 
     }
+
+    /**
+     * @dataProvider powerDigitSumDataProvider
+     */
+    public function testPowerDigitSum($power, $expectedResult)
+    {
+        $actualSum = $this->solution->getPowerDigitSum($power);
+        $this->assertEquals($expectedResult, $actualSum);
+    }
+
+    public function powerDigitSumDataProvider()
+    {
+        return [
+            [   'power'  => 15,
+                'result' => 26
+            ],
+        ];
+    }
+
 }
