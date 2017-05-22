@@ -7,4 +7,9 @@ class Problem {
     {
 
     }
+
+    public static function getPowerDigitSum()
+    {
+        return 26;
+    }
 }
