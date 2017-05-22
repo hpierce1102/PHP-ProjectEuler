@@ -47,6 +47,10 @@ class ProblemTest extends TestCase
             [   'power'  => 15,
                 'result' => 26
             ],
+            [   'power'  => 1000,
+                'result' => 1366
+            ],
+
         ];
     }
 
