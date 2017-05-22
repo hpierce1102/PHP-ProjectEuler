@@ -16,7 +16,7 @@ class Problem {
      */
     public static function getPowerDigitSum($power)
     {
-        $power = (string) 2 ** $power;
+        $power = (string) gmp_pow(2, $power);
         $sum = 0;
 
         for($i = 0; $i < strlen($power); $i++){
